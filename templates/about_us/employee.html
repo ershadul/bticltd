@@ -1,0 +1,17 @@
+{% load i18n thumbnail %}
+
+<li {% if forloop.first %} class="first" {% else %} {% if forloop.counter|divisibleby:3 %}class="odd"{%  endif %}{% endif %}>
+    <div class="text">
+        <h2>{{ employee.name }}</h2>
+        {% if employee.tag_line %}<p>({{ employee.tag_line }})</p>{% endif %}
+        <p class="border"><b>{{ employee.designation }}</b></p>
+    </div>
+    {% if employee.image %}
+        <div class="thumb">
+            {% thumbnail employee.image "75x75" as img %}
+                <img src="{{ img.url }}" />
+            {% endthumbnail %}
+        </div>
+    {% endif %}
+    <div class="clear"></div>
+</li>

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load  cms_tags i18n %}
+
+
+{% block breadcrumb %}
+    <ul>
+        <li><a href="/">{% trans "Home" %}</a></li>
+        <li>{% page_attribute "page_title" %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="page-title">
+        <h1>{% page_attribute "page_title" %}</h1>
+        <div class="dottedline"></div>
+    </div>
+
+    {% if not message %}
+    <div class="frm">
+        <p>
+            {% placeholder "message_header" %}
+        </p>
+
+        <form class="frm-contact"  method="post">
+            {% csrf_token %}
+            <ul>
+                <li>
+                    <label for="c-name"><span>{% trans "Name" %}</span></label>
+                    <input type="text" name="name" id="c-name" class="input-txt" value="{{ data.name }}"/>
+                    <div class="clear"></div>
+                    <span class="frm-error">{{ form.name.errors|safe }}</span>
+                </li>
+                <li>
+                    <label for="c-email"><span>{% trans "Email" %}</span> </label>
+                    <input type="text" name="email" id="c-email" class="input-txt" value="{{ data.email }}"/>
+                    <div class="clear"></div>
+                    <span class="frm-error">{{ form.email.errors|safe }}</span>
+                </li>
+                <li>
+                    <label for="c-name"><span>{% trans "Company" %}</span></label>
+                    <input type="text" name="company" id="c-company" class="input-txt" value="{{ data.company }}"/>
+                    <div class="clear"></div>
+                    <span class="frm-error">{{ form.company.errors|safe }}</span>
+                </li>
+                <li>
+                    <label for="c-message"><span>{% trans "Message" %}</span></label>
+                    <textarea name="message" id="c-message" rows="5" cols="30" class="input-txt">{{ data.message }}</textarea>
+                    <div class="clear"></div>
+                    <span class="frm-error">{{ form.message.errors|safe }}</span>
+                </li>
+                <li class="btnrow">
+                    <label>&nbsp;</label>
+					<input type="submit" name="c-submit" class="frm-btn btn-submit left" value="{% trans "Contact" %}"/>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endblock %}

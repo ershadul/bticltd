@@ -1,0 +1,13 @@
+{% extends "inner_layout.html" %}
+
+{% load cms_tags i18n menu_tags %}
+
+{% block full_breadcrumb %}
+    <ul>
+    {% show_breadcrumb %}
+    </ul>
+{% endblock %}
+
+{% block page_content %}
+    <p style="font-size: 18px;">{% trans "404 - Page not found." %}</p>
+{% endblock %}

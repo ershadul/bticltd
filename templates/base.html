@@ -1,0 +1,124 @@
+{% load cms_tags %}
+{% load menu_tags %}
+{% load thumbnail %}
+{% load i18n %}
+
+{% get_current_language as current_language %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" {% block html_attributes %}{% endblock %}>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock %}</title>
+        {% block meta %}
+        <meta name="description" content="{% page_attribute meta_description %}"/>
+        <meta name="keywords" content="{% page_attribute meta_keywords %}"/>
+    {% endblock %}
+
+    {% block css %}
+        {% ifequal current_language "en" %}
+            <link rel="stylesheet" type="text/css" media="screen" href="/media/css/styles-en.css" />
+        {% else %}
+            <link rel="stylesheet" type="text/css" media="screen" href="/media/css/styles-en.css" />
+        {% endifequal %}
+    {% endblock %}
+    {% block head_extra %}{% endblock %}
+</head>
+<body {% block body_attributes %}{% endblock %}>
+<div class="wrapper">
+    <div class="clsbodybg">
+        <div class="clslogotext"><a href="#">Your Logo Here</a></div>
+        <div class="clsrightside">
+            <div class="clslanguage right">
+                {% language_chooser %}
+                <div class="clear"></div>
+            </div>
+            <!--
+            <div class="clssearchbox"><span>Search GP</span>
+                <input type="text" value="Search By Keyword..." />
+                <a href="#"><input type="submit" value="" /></a>
+            </div>
+            -->
+            <div class="clear"></div>
+            <a id="contact-us" class="right" href="{% page_url "contact-us" %}">{% page_attribute "page_title" "contact-us" %}</a>
+            <div class="clear"></div>
+        </div>
+        <div class="clsmenu">
+            <ul>
+                {% show_menu 0 100 100 100 %}
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="main-container">
+            {% block main_content %}
+                <div class="breadcrumb">
+                    {% block breadcrumb %}
+                    <ul>
+                        {% show_breadcrumb %}
+                    </ul>
+                    {% endblock %}
+                </div>
+                <div class="clear"></div>
+                <div class="dottedline"></div>
+                {% block content %}{% endblock %}
+            {% endblock %}
+        </div>
+        <div class="clear"></div>
+        <div class="clshorline"></div>
+
+        <!--
+        <div class="clsfooternavi">
+            <ul>
+                <li><a href="#">Investeor Relations</a></li>
+                <li><a href="#">Djuice</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Send SMS</a></li>
+                <li><a href="#">GPIT</a></li>
+                <li><a href="#">MobiCash</a></li>
+
+            </ul>
+        </div>
+        -->
+
+        <div class="clsfootersubnavi">
+            <ul>
+                <li class="one"><a href="#">Copyright 2011 BTIC Ltd.</a></li>
+                <li><a href="{% page_url "contact-us" %}">{% page_attribute "page_title" "contact-us" %}</a></li>
+                <!--
+                <li><a href="#">Locate Gp Centers</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Sitemap</a></li>
+                -->
+            </ul>
+        </div>
+
+        <!--
+        <div class="clsfollowus">
+            <h4>Follow us</h4>
+            <ul>
+                <li><a href="#"><img src="/media/css/images/t.jpg" alt="t" /></a></li>
+                <li><a href="#"><img src="/media/css/images/f.jpg" alt="f" /></a></li>
+                <li><a href="#"><img src="/media/css/images/ut.jpg" alt="ut" /></a></li>
+                <li><a href="#"><img src="/media/css/images/in.jpg" alt="in" /></a></li>
+                <li><a href="#"><img src="/media/css/images/aa.jpg" alt="aa" /></a></li>
+            </ul>
+        </div>
+        -->
+    </div>
+    <div class="clsbottombg"></div>
+    <!-- /footer -->
+    <div class="clear"></div>
+    <div id="video-overlay"></div>
+</div>
+{% include "popups/video_popup.html" %}
+<!-- /wrapper -->
+{% block site_js %}
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/media/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/media/js/superfish.js"></script>
+    <script type="text/javascript" src="/media/jwplayer/jwplayer.js"></script>
+    <script type="text/javascript" src="/media/js/site.js"></script>
+    {% block js %}{% endblock %}
+{% endblock %}
+</body>
+</html>

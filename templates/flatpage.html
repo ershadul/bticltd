@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load cms_tags i18n menu_tags %}
+
+{% block content %}
+    <div class="content">
+        <div class="page-title">
+            <h1>{% page_attribute "page_title" %}</h1>
+            <div class="dottedline"></div>
+        </div>
+        <div class="page-content">
+             {% placeholder "page_content" %}
+             {% block page_content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

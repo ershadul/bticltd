@@ -1,0 +1,21 @@
+{% load i18n %}
+
+{% ifnotequal page.paginator.num_pages 1 %}
+    {% if page.paginator.page_range %}
+        <div id="pagination">
+            {% if page.has_previous %}
+                <span><a href="?page={{ page.previous_page_number }}" class="prev">{% trans "Previous" %}</a></span>
+            {% endif %}
+            {% for p in page.paginator.page_range %}
+                <span {% ifequal p page.number %}class="active" {% endifequal %}>
+                    <a href="?page={{ p }}">{{ p }}</a>
+                </span>
+            {% endfor %}
+            {% if page.has_next %}
+                <span>
+                    <a href="?page={{ page.next_previous_number }}" class="next">{% trans "Next" %}</a>
+                </span>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endifnotequal %}

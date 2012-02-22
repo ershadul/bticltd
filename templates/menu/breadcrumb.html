@@ -1,0 +1,9 @@
+{% for ance in ancestors %}
+<li>{% if not forloop.last %}
+		<a href="{% if ance.children %}{{ ance.children.0.attr.redirect_url|default:ance.children.0.get_absolute_url }}
+                {% else %}{{ ance.attr.redirect_url|default:ance.get_absolute_url }}{% endif %}">{{ ance.get_menu_title }}</a>
+	{% else %}
+			{{ ance.get_menu_title }}
+	{% endif %}
+</li>
+{% endfor %}

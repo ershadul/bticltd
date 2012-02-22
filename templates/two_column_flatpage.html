@@ -1,0 +1,15 @@
+{% extends "two_column_layout.html" %}
+
+{% load cms_tags i18n menu_tags %}
+
+{% block page_content %}
+    <div class="content">
+        <div class="page-title">
+            <h1>{% page_attribute "page_title" %}</h1>
+            <div class="dottedline"></div>
+        </div>
+        <div class="page-content">
+            {% placeholder "page_content" %}
+        </div>
+    </div>
+{% endblock %}

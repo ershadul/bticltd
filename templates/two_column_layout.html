@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load cms_tags i18n menu_tags %}
+
+{% block content %}
+    <div class="two-column-wrapper">
+        <div class="sidebar-nav left">
+
+            {% block sidebar %}
+            {% endblock %}
+        </div>
+        <div class="main-column left">
+            {% block page_content %}{% endblock %}
+        </div>
+        <div class="clear"></div>
+    </div>
+{% endblock %}

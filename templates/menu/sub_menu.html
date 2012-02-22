@@ -1,0 +1,8 @@
+{% load menu_tags %}
+{% for child in children %}
+<li>
+	<a href="{% if child.children %}{{ child.children.0.attr.redirect_url|default:child.children.0.get_absolute_url }}
+	    {% else %}{{ child.attr.redirect_url|default:child.get_absolute_url }}{% endif %}">
+    {{ child.get_menu_title }}</a>
+</li>
+{% endfor %}

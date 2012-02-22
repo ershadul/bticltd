@@ -1,0 +1,33 @@
+{% extends "news/news_page_layout.html" %}
+
+{% load cms_tags i18n thumbnail menu_tags %}
+
+{% block main_column %}
+<div class="page-content">
+    <ul class="item-list">
+        {% for news in page.object_list %}
+        <li>
+            {% if news.has_thumbnail %}
+            <div class="item-thumb-box">
+                {% thumbnail news.get_thumbnail "120x120"  as  image %}
+                <a href="{{ news.get_absolute_url }}" {% if news.has_video %}class="video"{% endif %}>
+                    {% if news.has_video %}<span>&nbsp;</span>{% endif %}
+                    <img src="{{ image.url }}" />
+                </a>
+                {% endthumbnail %}
+            </div>
+            {% endif %}
+            <div class="item-desc-box">
+                <h2><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></h2>
+                <div class="item-desc">
+                    {{ news.description|truncatewords_html:50|safe }}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% include "pagination.html" %}
+
+{% endblock %}

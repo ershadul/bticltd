@@ -1,0 +1,33 @@
+{% extends "inner_layout.html" %}
+
+{% load cms_tags i18n menu_tags %}
+
+{% block title %}
+{% trans "Search Results" %}
+{% endblock %}
+
+{% block share_controls %}{%  endblock %}
+
+{% block breadcrumb %}
+    <li>{% trans "Search Results" %}</li>
+{% endblock %}
+
+{% block page_content %}
+    <h1>{% trans "Search Results" %}</h1>
+    {% block description %}
+        {% for result in page.object_list %}
+            <!--item -->
+            <div class="item {% if not forloop.counter|divisibleby:2 %}itembg{% endif %}">
+                <a href="{{ result.object.get_absolute_url }}"><h3>{{ result.object }}</h3></a>
+                {% if result.object.description %}
+                    <p>{{ result.object.description|truncatewords_html:30|safe }}</p>
+                {% endif %}
+                <a href="{{ result.object.get_absolute_url }}" class="more">{% trans "Read more" %} &gt;&gt;</a>
+            </div>
+        {% empty %}
+            <p>
+                {% trans "No result found." %}
+            </p>
+        {% endfor %}
+    {% endblock %}
+{% endblock %}

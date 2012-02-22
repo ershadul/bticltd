@@ -1,0 +1,12 @@
+{% extends "about_us/about_us.html" %}
+
+{% load cms_tags i18n %}
+
+{% block main_column %}
+    <ul id="employee-list">
+    {% for employee in employees %}
+        {% include "about_us/employee.html" %}
+    {% endfor %}
+    </ul>
+    <div class="clear"></div>
+{% endblock %}

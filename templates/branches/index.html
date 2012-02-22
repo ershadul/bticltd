@@ -1,0 +1,37 @@
+{% extends "flatpage.html" %}
+
+{% load i18n %}
+
+{% block page_content %}
+    <table id="branch-list" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr class="first">
+            <th width="10%" class="first">{% trans "Country" %}</th>
+            <th width="10%">{% trans "State/District" %}</th>
+            <th width="20%">{% trans "Branch" %}</th>
+            <th width="20%">{% trans "Address" %}</th>
+            <th width="20%">{% trans "Contact" %}</th>
+            <th width="20%">{% trans "Description" %}</th>
+        </tr>
+        {% for location in locations %}
+            <tr class="country">
+                <td class="first" colspan="6">{{ location.name }}</td>
+            </tr>
+            {% for child in location.children.all %}
+                <tr class="city">
+                    <td class="first"></td>
+                    <td colspan="5">{{ child.name }}</td>
+                </tr>
+                {% for branch in child.branch_set.all %}
+                    <tr>
+                        <td class="first"></td>
+                        <td></td>
+                        <td>{{ branch.name }}</td>
+                        <td>{{ branch.address|safe }}</td>
+                        <td>{{ branch.contact|safe }}</td>
+                        <td>{{ branch.description|safe }}</td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </table>
+{% endblock %}

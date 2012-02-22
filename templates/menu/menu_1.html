@@ -1,0 +1,29 @@
+{% load menu_tags i18n %}
+
+{% for child in children %}
+    <li {% if forloop.first %} class="one" {% endif %}>
+        <a {% if child.selected or child.ancestor %}
+                class="selected"
+                {% endif %}
+                href="{% if child.children %}#
+                {% else %}{{ child.attr.redirect_url|default:child.get_absolute_url }}{% endif %}">
+            {% if forloop.first %}
+            <img src="/media/css/images/home.png" alt="{% trans "Home" %}" />
+            {% else %}
+            {{ child.get_menu_title }}
+            {% endif %}
+        </a>
+        {% if child.children %}
+            <ul>
+                {% for ch in child.children %}
+                    <li {% if forloop.last %}class="last"{% endif %}>
+                        <a href="{% if ch.children %}{{ ch.children.0.attr.redirect_url|default:ch.children.0.get_absolute_url }}{% else %}{{ ch.attr.redirect_url|default:ch.get_absolute_url }}{% endif %}">
+                            {{ ch.get_menu_title }}
+                        </a>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
