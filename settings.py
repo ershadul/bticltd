@@ -204,7 +204,6 @@ GEOIP_PATH = os.path.join(PROJECT_PATH, "bin")
 THUMBNAIL_DEBUG = True
 
 try:
-    #from local_settings import *
-    pass
+    from local_settings import *
 except Exception, e:
     pass
