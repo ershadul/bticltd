@@ -1,0 +1,33 @@
+{% extends "news/news_page_layout.html" %}
+
+{% load cms_tags i18n thumbnail menu_tags %}
+
+{% block main_column %}
+<div class="page-content">
+    <!--gallery -->
+    <div class="gallery">
+        <ul>
+            {% for video in page.object_list %}
+            <li {% if forloop.counter|divisibleby:4 %} class="last" {% endif %}>
+                {% if video.has_thumbnail %}
+                    {% thumbnail video.get_thumbnail "147x99"  as  image %}
+                    <a href="{{ video.get_video|escape }}" data-video-url="{{ video.get_video|escape }}" {% if video.has_video %}class="video"{% endif %}>
+                        {% if video.has_video %}<span data-video-url="{{ video.get_video|escape }}">&nbsp;</span>{% endif %}
+                        <img src="{{ image.url }}" width="147" height="99" alt="{{ video.title }}" title="{{ video.title }}" data-video-url="{{ video.get_video|escape }}" />
+                    </a>
+                    {% endthumbnail %}
+                {% endif %}
+                <span>
+                    {{ video.created_at|date:"d/m/Y" }}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="clear"></div>
+        {% include "pagination.html" %}
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!-- End of Gallery -->
+</div>
+{% endblock %}

@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'contacts',
     'about_us',
     'branches',
+    'banners',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

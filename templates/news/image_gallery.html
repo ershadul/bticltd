@@ -1,0 +1,30 @@
+{% extends "news/news_page_layout.html" %}
+
+{% load cms_tags i18n thumbnail menu_tags %}
+
+{% block main_column %}
+<div class="page-content">
+    <!--gallery -->
+    <div class="gallery">
+        <ul>
+            {% for photo in page.object_list %}
+            <li {% if forloop.counter|divisibleby:4 %} class="last" {% endif %}>
+                <a href="{{ photo.image.url }}" class="lightbox" title="{{ photo.title }}">
+                    {% thumbnail photo.image "147x99" as img %}
+                        <img src="{{ img.url }}" width="147" height="99" alt="{{ photo.title }}" title="{{ photo.title }}" /> 
+                    {% endthumbnail %}
+                </a>
+                {% comment %}
+                {% if photo.title %}<a href="#">{{ photo.title|truncatewords:5 }}</a>{% endif %}
+                {% endcomment %}
+                <span>{{ photo.created_at|date:"d/m/Y" }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="clear"></div>
+        {% include "pagination.html" %}
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+{% endblock %}

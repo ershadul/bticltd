@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
-{% block main_content %}
+{% load banners_tags i18n thumbnail %}
 
+{% block main_content %}
+    <div class="clear"></div>
+    <div class="homeslider">{% banner_slideshow %}</div>
+    <div class="clear"></div>
 {% endblock %}
 
 

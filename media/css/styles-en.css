@@ -77,7 +77,7 @@ img{
     margin: 0 auto;
 }
 .main-container {
-    margin: 10px 17px;
+    margin: 15px 17px;
     padding-bottom: 20px;
     width: 940px;
 }
@@ -302,6 +302,7 @@ background:url(images/menuhover.jpg) repeat-x;
     position: absolute;
     border:5px solid #49b38e;
 	width:169px;
+	z-index: 999999;
 }
 
 .clsmenu ul li ul li ul
@@ -315,6 +316,7 @@ background:url(images/menuhover.jpg) repeat-x;
     position: absolute;
     border: 5px solid #49b38e;
     width: 169px;
+    z-index: 999999;
 }
 
 .clsmenu ul li ul li
@@ -804,14 +806,14 @@ div#pagination {
 }
 
 div#pagination span {
-    border: 1px solid #008000;
+    border: 1px solid #10A16E;
     padding: 3px 5px;
     margin-right: 5px;
     text-align: center;
 }
 
 div#pagination span.active {
-    background-color: #008000;
+    background-color: #10A16E;
     color: #fff;
 
 }
@@ -1040,3 +1042,14 @@ div.description {
     margin-top: 15px;
     font-size: 14px;
 }
+
+.homeslider {
+    margin-left: 2px;
+}
+
+/*gallery*/
+.gallery li{ float:left; width:147px; height:150px; text-align:center; padding:0 20px 0 5px;}
+	.gallery li.last{padding-right:0;}
+	.gallery li a,
+	.gallery li a:visited,
+	.gallery li  span{ color:#646464; font-size:12px; line-height:20px; display:block;}

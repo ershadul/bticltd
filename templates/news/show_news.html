@@ -11,10 +11,9 @@
         {% if news_obj.has_thumbnail %}
             <div class="image-box">
                 {% thumbnail news_obj.get_thumbnail "690x400" as img %}
-
                     {% if news_obj.has_video %}
-                        <a href="#" data-video-url="{{ news_obj.get_video }}" class="video">
-                        <span data-video-url="{{ news_obj.get_video }}">&nbsp;</span>
+                        <a href="#" data-video-url="{{ news_obj.get_video|escape }}" class="video">
+                        <span data-video-url="{{ news_obj.get_video|escape }}">&nbsp;</span>
                     {% endif %}
                 <img class="big-thumb" src="{{ img.url }}" />
                 {% if news_obj.has_video %}

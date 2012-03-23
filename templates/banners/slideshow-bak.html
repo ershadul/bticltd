@@ -1,0 +1,25 @@
+{% load thumbnail %}
+<ul id="slider">
+    {% for photo in photos %}
+        <li>
+            <div class="slide-img">
+            {% if photo.url %}
+                <a href="{{ photo.url }}">
+            {% endif %}
+            {% thumbnail photo.image "550x250" as img %}
+                <img src="{{ img.url }}" alt="{{ photo.title }}"  /> 
+            {% endthumbnail %}
+            {% if photo.url %}
+                </a>
+            {% endif %}
+            </div>
+            <div class="slide-text">
+                <h2>{{ photo.title }}</h2>
+                {% if photo.summary %}
+                <p>{{ photo.summary|striptags }}</p>
+                {% endif %}
+            </div>
+            <div class="clear"></div>
+        </li>
+    {% endfor %}
+</ul>

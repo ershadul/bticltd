@@ -15,10 +15,12 @@
     {% endblock %}
 
     {% block css %}
+        <link rel="stylesheet" type="text/css" href="/media/css/jquery.lightbox-0.5.css" />
+        <link rel="stylesheet" type="text/css" href="/media/lof-slider/css/lof-slider.css" />
         {% ifequal current_language "en" %}
-            <link rel="stylesheet" type="text/css" media="screen" href="/media/css/styles-en.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/styles-en.css" />
         {% else %}
-            <link rel="stylesheet" type="text/css" media="screen" href="/media/css/styles-en.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/styles-en.css" />
         {% endifequal %}
     {% endblock %}
     {% block head_extra %}{% endblock %}
@@ -109,12 +111,18 @@
     <!-- /footer -->
     <div class="clear"></div>
     <div id="video-overlay"></div>
+    {% include "popups/video_popup.html" %}
 </div>
-{% include "popups/video_popup.html" %}
 <!-- /wrapper -->
 {% block site_js %}
-    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--
     <script type="text/javascript" src="/media/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/media/js/jquery.bxSlider.js"></script>
+    -->
+    <script type="text/javascript" src="/media/lof-slider/js/jquery.easing.js"></script>
+    <script type="text/javascript" src="/media/lof-slider/js/jquery.lofSlider.js"></script>
+    <script type="text/javascript" src="/media/js/jquery.lightbox-0.5.pack.js"></script>
     <script type="text/javascript" src="/media/js/superfish.js"></script>
     <script type="text/javascript" src="/media/jwplayer/jwplayer.js"></script>
     <script type="text/javascript" src="/media/js/site.js"></script>

@@ -1,0 +1,52 @@
+{% load thumbnail %}
+<div id="jslidernews2" class="lof-slidecontent" style="width:935px; height:300px;">
+    <div class="main-slider-content" style="width:935px; height:300px;">
+        <ul class="sliders-wrap-inner">
+            {% for photo in photos %}
+            <li>
+                {% if photo.url %}
+                <a href="{{ photo.url }}">
+                {% endif %}
+                {% thumbnail photo.image "640x300" crop="center" as img %}
+                <img src="{{ img.url }}" title="{{ photo.title }}"  alt="{{ photo.title }}" />      
+                {% endthumbnail %} 
+                {% if photo.url %}
+                </a>
+                {% endif %}  
+                <div class="slider-description">
+                    <h4>
+                        {% if photo.url %}
+                        <a href="{{ photo.url }}">
+                        {% endif %}
+                        {{ photo.title }}
+                        {% if photo.url %}
+                        </a>
+                        {% endif %}
+                    </h4>
+                    {% if photo.summary %}
+                    <p>{{ photo.summary|striptags|truncatewords:20 }}</p>
+                    {% endif %}
+                 </div>
+            </li>
+            {% endfor %}
+        </ul>   
+    </div>
+    <div class="navigator-content">
+          <div class="navigator-wrapper">
+              <ul class="navigator-wrap-inner">
+                  {% for photo in photos %}
+                  <li>
+                        <div>
+                            {% thumbnail photo.image "140x70" as img %}
+                            <img src="{{ img.url }}" title="{{ photo.title }}" alt="{{ img.title }}"/>
+                            {% endthumbnail %}
+                            <h3>{{ photo.title }}</h3>
+                            <span>{{ photo.update_at|date:"d.m.Y" }}</span>
+                            {% if photo.summary %}- {{ photo.summary|striptags|truncatewords:7 }}{% endif %}
+                        </div>    
+                  </li>
+                  {% endfor %}
+             </ul>
+        </div>
+    </div>
+</div>
