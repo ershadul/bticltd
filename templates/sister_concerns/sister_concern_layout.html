@@ -1,0 +1,18 @@
+{% extends "two_column_layout.html" %}
+
+{% load cms_tags menu_tags i18n sister_concerns_tags %}
+
+{% block sidebar %}
+    <h3>{% page_attribute "page_title" "sister-concerns" %}</h3>
+    {% show_sister_concerns_sidebar_menu %}
+    <div class="clear"></div>
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-title">
+        <h1>{% page_attribute "page_title" %}</h1>
+        <div class="dottedline"></div>
+    </div>
+    {% block main_column %}{% endblock %}
+    {% placeholder "main_column_content" %}
+{% endblock %}

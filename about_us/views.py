@@ -33,3 +33,28 @@ def director_index(request):
     }
     context = RequestContext(request, params)
     return render_to_response('about_us/directors.html', context)
+    
+def executive_index(request):
+    employees = Employee.objects.filter(employee_type='executive').all()
+    params = {
+        'employees': employees
+    }
+    context = RequestContext(request, params)
+    return render_to_response('about_us/employee_list.html', context)
+    
+def officeincharge_index(request):
+    employees = Employee.objects.filter(employee_type='office-incharge').all()
+    params = {
+        'employees': employees
+    }
+    context = RequestContext(request, params)
+    return render_to_response('about_us/employee_list.html', context)
+    
+
+def zonalincharge_index(request):
+    employees = Employee.objects.filter(employee_type='zonal-incharge').all()
+    params = {
+        'employees': employees
+    }
+    context = RequestContext(request, params)
+    return render_to_response('about_us/employee_list.html', context)

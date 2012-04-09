@@ -1,0 +1,9 @@
+{% load cms_tags i18n thumbnail %}
+
+<ul class="latest-news">
+    {% for news in news_list %}
+    <li {% if forloop.last %} class="last"{% endif %}>
+        <h3><a href="{% page_url "news" %}{{ news.get_absolute_url }}">{{ news.title }}</a></h3>
+    </li>
+    {% endfor %}
+</ul>

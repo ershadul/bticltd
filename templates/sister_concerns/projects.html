@@ -1,0 +1,44 @@
+{% extends "sister_concerns/sister_concern_layout.html" %}
+
+{% load i18n thumbnail cms_tags %}
+
+{% block page_content %}
+    <div class="page-title">
+        <div class="sc-header">
+            {% if sister_concern.logo %}
+            <a href="{{ sister_concern.logo.url }}" class="lightbox">
+            {% thumbnail sister_concern.logo "75x75" crop="center" as img %}
+            <img class="left" src="{{ img.url }}" title="{{ sister_concern.name }} {% trans "Logo" %}" 
+                alt="{{ sister_concern.name }} {% trans "Logo" %}" />
+            {% endthumbnail %}
+            {% endif %}
+            <div class="left">
+                <h1>{{ sister_concern.name }}</h1>
+                <p>{{ sister_concern.slogan }}</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="dottedline"></div>
+        <h2>{% trans "Projects" %}</h2>
+        <div class="clear"></div>
+        <div class="padding" id="projects">
+            <ul>
+                {% for project in sister_concern.project_set.all %}
+                <li>
+                    <a href="{{ project.id }}/">
+                        {% if project.logo %}
+                        {% thumbnail project.logo "75x75" crop="center" as img %}
+                            <img class="left" src="{{ img.url }}" title="{{ project.name }}" 
+                                alt="{{ project.name }}" />
+                        {% endthumbnail %}
+                        {% else %}
+                        {{ project.name }}
+                        {% endif %}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+{% endblock %}

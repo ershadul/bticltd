@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'about_us',
     'branches',
     'banners',
+    'sister_concerns',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -155,6 +156,7 @@ CMS_TEMPLATES = (
     ('flatpage.html', 'Flat Page'),
     ('two_column_flatpage.html', 'Two column Flat Page'),
     ('news/news_page_layout.html', 'News Room Page'),
+    ('sister_concerns/sister_concern_layout.html', 'Sister Concerns Page'),
 )
 
 CMS_USE_TINYMCE = True

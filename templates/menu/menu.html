@@ -1,4 +1,4 @@
-{% load menu_tags %}
+{% load menu_tags sister_concerns_tags %}
 
 {% for child in children %}
     <li {% if forloop.first %} class="one" {% endif %}>
@@ -43,6 +43,10 @@
                     </li>
                 {% endfor %}
             </ul>
+        {% else %}
+            {% if forloop.counter == 3 %}
+                {% show_sister_concerns_menu %}
+            {% endif %}
         {% endif %}
     </li>
 {% endfor %}

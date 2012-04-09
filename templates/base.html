@@ -28,9 +28,22 @@
 <body {% block body_attributes %}{% endblock %}>
 <div class="wrapper">
     <div class="clsbodybg">
-        <div class="clslogotext"><a href="#">Your Logo Here</a></div>
+        <div class="clslogotext">
+            <a href="/">
+                <img src="/media/css/images/logo.png" alt="{% trans "BTIC Ltd." %}" title="{% trans "BTIC Ltd." %}">
+            </a>
+            <div class="left padding" style="padding-left: 10px; padding-bottom: 15px;">
+                <a class="left" href="/">{% trans "Bushra Trade International Corporation Ltd." %}</a>
+                <div class="clear"></div>
+                <p style="margin-top: 10px; color: #444; font-weight: normal; font-size: 18px;">{% trans "A multinetwork Joint Business Company" %}</p>
+            </div> 
+        </div>
         <div class="clsrightside">
             <div class="clslanguage right">
+                <div class="menu-item right">
+                    <span>|</span>
+                    <a href="{% page_url "contact-us" %}">{% page_attribute "page_title" "contact-us" %}</a>
+                </div>
                 {% language_chooser %}
                 <div class="clear"></div>
             </div>
@@ -40,8 +53,6 @@
                 <a href="#"><input type="submit" value="" /></a>
             </div>
             -->
-            <div class="clear"></div>
-            <a id="contact-us" class="right" href="{% page_url "contact-us" %}">{% page_attribute "page_title" "contact-us" %}</a>
             <div class="clear"></div>
         </div>
         <div class="clsmenu">
@@ -115,9 +126,10 @@
 </div>
 <!-- /wrapper -->
 {% block site_js %}
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    
+    <script type="text/javascript" src="/media/js/jquery.min.js"></script>
     <!--
-    <script type="text/javascript" src="/media/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="/media/js/jquery.bxSlider.js"></script>
     -->
     <script type="text/javascript" src="/media/lof-slider/js/jquery.easing.js"></script>

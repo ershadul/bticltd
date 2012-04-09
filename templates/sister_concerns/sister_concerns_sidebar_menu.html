@@ -1,0 +1,48 @@
+{% load i18n cms_tags %}
+
+<ul id="sister-concerns-sidebar-menu">
+    {% for sc in sister_concerns %}
+        <li class="{% if sc.sub_menu %}expandable{% endif %}{% if forloop.last %} last{% endif %}">
+            {% if sc.sub_menu %}<a href="#" class="expandable {% if sc.id == sister_concern.id %} expanded{% else %} minimized{% endif %}">&nbsp;</a>{% endif %}
+            <a {% if sc.sub_menu %}class="noarrow"{% endif %} href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}">{{ sc.name }}</a>  
+            {% if sc.sub_menu %}
+            <ul {% if sc.id == sister_concern.id %}style="display: block"{% endif %}>
+                {% for submenu in sc.sub_menu %}
+                <li {% if forloop.last %}class="last"{% endif %}>
+                    {% if sc.sub_menu %}<a href="#" class="expandable 
+                        {% if sc.id == sister_concern.id and submenu.type == 'products' and product %}
+                        expanded
+                        {% else %}
+                            {% if sc.id == sister_concern.id and submenu.type == 'projects' and project %}
+                            expanded
+                            {% else %}
+                            minimized
+                            {% endif %}
+                        {% endif %}
+                        ">&nbsp;</a>{% endif %}
+                    {% if submenu.type == 'projects' %}
+                    <a class="noarrow" href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}projects/">
+                        {% trans "Projects" %}</a>
+                    {% else %}
+                    <a class="noarrow" href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}products/">{% trans "Products" %}</a>
+                    {% endif %}
+                    <ul {% if sc.id == sister_concern.id and submenu.type == 'products' and product %}
+                        style="display: block;"
+                    {% else %}
+                        {% if sc.id == sister_concern.id and submenu.type == 'projects' and project %}
+                            style="display: block;"
+                        {% endif %}
+                    {% endif %}>
+                        {% for item in submenu.items %}
+                            <li {% if forloop.last %} class="last" {% endif %}>
+                                <a href="{% page_url "sister-concerns" %}{{ item.get_absolute_url }}">{{ item.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

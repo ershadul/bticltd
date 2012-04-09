@@ -1,10 +1,27 @@
 {% extends "base.html" %}
 
-{% load banners_tags i18n thumbnail %}
+{% load banners_tags i18n thumbnail sister_concerns_tags cms_tags news_tags %}
 
 {% block main_content %}
     <div class="clear"></div>
     <div class="homeslider">{% banner_slideshow %}</div>
+    <div class="clear"></div>
+    
+    <div id="welcome-box">
+        <h4>{% trans "Welcome to BTIC" %}</h4>
+        <div>{% placeholder "welcome_text" %}</div> 
+    </div>
+    
+    <div id="latest-news" class="clsprtborder">
+        <h2>{% trans "Latest News" %}</h2>
+        <div class="green-line"></div>
+        {% latest_news %}
+    </div>
+    <div id="featured-products" class="clsprtborder">
+        <h2>{% trans "Featured Products and Projects" %}</h2>
+        <div class="green-line"></div>
+        {% featured_products %}
+    </div>
     <div class="clear"></div>
 {% endblock %}
 

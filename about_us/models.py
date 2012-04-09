@@ -12,6 +12,9 @@ class Employee(models.Model):
     EMPLOYEE_TYPES = (
         ('advisor', _('Advisor')),
         ('director', _('director')),
+        ('executive', _('Executive')),
+        ('zonal-incharge', _('Zonal Incharge')),
+        ('office-incharge', _('Office Incharge')),
     )
     employee_type = models.CharField(max_length=75, choices=EMPLOYEE_TYPES, db_index=True)
     created_at = models.DateTimeField(_('Created At'), default=datetime.datetime.now())

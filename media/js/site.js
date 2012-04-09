@@ -63,24 +63,6 @@ $(document).ready(function() {
         animation:   {opacity:'show',height:'show'}
     });
     
-    // Big Slider in Home page
-    /*
-    if ($('#slider').length){
-		var slider = $('#slider').bxSlider({
-			mode:'fade',
-			controls:false,
-			pager:true,
-			auto:true,
-			pause:5000
-
-		});
-		if ($('.bx-pager').length){
-			var pw=$('.bx-pager a').length*51
-			var boxw=($('.bx-pager').parent().width()-pw)/2; 
-			$('.bx-pager').css({'padding-left':boxw+'px','padding-right':boxw+'px'});
-		}
-	}
-	*/
     console.log('creating lof slider');
     $('#jslidernews2').lofJSidernews({ 
         interval: 5000,
@@ -102,4 +84,19 @@ $(document).ready(function() {
         imageBlank:                '/media/css/images/lightbox-blank.gif'
     });
     
+    // Sidebar menu
+    //$('a.minimized').parent('li').find('ul').hide();
+    
+    $('a.expandable').click(function (e) {
+        e.preventDefault();
+        if ($(e.target).hasClass('minimized')) {
+            $(e.target).parent('li').find('ul:first').slideDown();
+            $(e.target).removeClass('minimized');
+            $(e.target).addClass('expanded');
+        } else if ($(e.target).hasClass('expanded')) {
+            $(e.target).parent('li').find('ul:first').slideUp();
+            $(e.target).removeClass('expanded');
+            $(e.target).addClass('minimized');
+        }
+    });
 });

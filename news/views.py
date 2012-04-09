@@ -1,3 +1,4 @@
+# news/views.py
 from django import http
 import urllib, urlparse
 from django.conf import settings

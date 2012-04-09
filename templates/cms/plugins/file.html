@@ -1,0 +1,6 @@
+{% if object.file.url %}
+<a target="_blank" href="{{ object.file.url }}">
+{% if object.title %}{{ object.title }}{% else %}{{ object.get_file_name }}{% endif %}
+</a>
+<br /><br />
+{% endif %}

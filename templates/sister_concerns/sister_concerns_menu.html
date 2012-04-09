@@ -1,0 +1,29 @@
+{% load i18n cms_tags %}
+<ul class="sister-concerns-menu">
+    {% for sc in sister_concerns %}
+        <li {% if forloop.last %} class="last" {% endif %}>
+            <a href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}">{{ sc.name }}</a>  
+            {% if sc.sub_menu %}
+            <ul>
+                {% for submenu in sc.sub_menu %}
+                <li {% if forloop.last %} class="last" {% endif %}>
+                    {% if submenu.type == 'projects' %}
+                    <a href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}projects/">{% trans "Projects" %}</a>
+                    {% else %}
+                    <a href="{% page_url "sister-concerns" %}{{ sc.get_absolute_url }}products/">{% trans "Products" %}</a>
+                    {% endif %}
+                    <ul>
+                        {% for item in submenu.items %}
+                            <li {% if forloop.last %} class="last" {% endif %}>
+                                <a href="{% page_url "sister-concerns" %}{{ item.get_absolute_url }}">{{ item.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+       

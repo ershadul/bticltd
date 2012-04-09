@@ -3,10 +3,9 @@
 {% get_current_language as current_language %}
 
 {% for language in languages %}
-    <div class="menu-item right {% ifequal current_language language.0 %} active {% endifequal %}">
-        {% if not forloop.last %}
-            <span>|</span>
-        {% endif %}
-        <a href="{% page_language_url language.0 %}">{{ language.1 }}</a>
-    </div>
+    {% ifnotequal current_language language.0 %}
+        <div class="menu-item right">
+            <a href="{% page_language_url language.0 %}">{{ language.1 }}</a>
+        </div>
+    {% endifnotequal %}
 {% endfor %}

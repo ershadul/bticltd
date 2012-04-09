@@ -1,0 +1,9 @@
+{% load cms_tags i18n thumbnail %}
+
+<ul class="featured-items">
+    {% for item in items %}
+    <li {% if forloop.last %} class="last"{% endif %}>
+        <h3><a href="{% page_url "sister-concerns" %}{{ item.get_absolute_url }}">{{ item.name }}</a></h3>
+    </li>
+    {% endfor %}
+</ul>

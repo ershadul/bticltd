@@ -15,3 +15,24 @@ class DirectorApp(CMSApp):
     menus = []
 
 apphook_pool.register(DirectorApp)
+
+class ExecutiveApp(CMSApp):
+    name = _('Executives App')
+    urls = ['about_us.executive_urls']
+    menus = []
+
+apphook_pool.register(ExecutiveApp)
+
+class OfficeInchargeApp(CMSApp):
+    name = _('Office Incharge App')
+    urls = ['about_us.office_incharge_urls']
+    menus = []
+
+apphook_pool.register(OfficeInchargeApp)
+
+class ZonalInchargeApp(CMSApp):
+    name = _('Zonal Incharge App')
+    urls = ['about_us.zonal_incharge_urls']
+    menus = []
+
+apphook_pool.register(ZonalInchargeApp)
