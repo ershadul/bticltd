@@ -144,35 +144,33 @@ margin:2px 0px 0px 2px;
 
 .clssearchbox
 {
-
-background:url(images/searchbox.jpg) no-repeat;
-height:40px;
-width:301px;
-margin:20px 0px 0px 0px;
-
-font:12px Arial, Helvetica, sans-serif;
-color:#535353;
+    /*background: url(images/searchbox.jpg) no-repeat;*/
+    height: 40px;
+    /*width: 200px;*/
+    margin: 20px 0px 0px 0px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #535353;
 }
 
 .clssearchbox span
 {
-float:left;
-padding:12px 0px 0px 10px;
-font:12px Arial, Helvetica, sans-serif;
-color:#535353;
+    float:left;
+    padding:12px 0px 0px 10px;
+    font:12px Arial, Helvetica, sans-serif;
+    color:#535353;
 }
 
 .clssearchbox input[type=text]
 {
-float:left;
-background:url(images/searchtext.jpg) no-repeat;
-height:24px;
-width:192px;
-border:none;
-padding:0px 0px 0px 5px;
-margin:7px 0px 0px 3px;
-font:12px Arial, Helvetica, sans-serif;
-color:#c4c4c4;
+    float:left;
+    background:url(images/searchtext.jpg) no-repeat;
+    height:24px;
+    width: 162px;
+    border:none;
+    padding:0px 0px 0px 5px;
+    margin: 7px 0px 0px 3px;
+    font:12px Arial, Helvetica, sans-serif;
+    color:#c4c4c4;
 }
 
 .clssearchbox input[type=submit]
@@ -180,7 +178,7 @@ color:#c4c4c4;
 float:left;
 background:url(images/searchbtn.jpg) no-repeat;
 height:24px;
-width:23px;
+width: 23px;
 border:none;
 padding:0px 0px 0px 0px;
 margin:7px 0px 0px 0px;

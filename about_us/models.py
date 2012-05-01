@@ -28,7 +28,6 @@ class Employee(models.Model):
         name = models.CharField(_('Name'), max_length=255)
         tag_line = models.CharField(_('Tag Line'), max_length=75, null=True, blank=True)
         contact_number = models.CharField(_('Contact Numbers'), max_length=255, null=True, blank=True)
-        tag_line = models.CharField(_('Tag Line'), max_length=75, null=True, blank=True)
         designation = models.CharField(_('Designation'), max_length=75, null=True, blank=True)
         description = models.TextField(_('Description'), null=True, blank=True)
     

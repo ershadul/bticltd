@@ -1,9 +1,9 @@
 from haystack.indexes import *
 from haystack import site
 
-from news.models import News
+from md_messages.models import Message
 
-class NewsIndex(SearchIndex):
+class MessageIndex(SearchIndex):
     text = CharField(document=True, use_template=True)
 
-site.register(News, NewsIndex)
+site.register(Message, MessageIndex)

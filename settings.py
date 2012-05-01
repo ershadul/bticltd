@@ -121,8 +121,8 @@ INSTALLED_APPS = (
     'cms.plugins.picture',
     'cms.plugins.text',
     'cms.plugins.video',
-    #'haystack',
-    #'cms_search',
+    'haystack',
+    'cms_search',
 
     'news',
     'md_messages',
@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'branches',
     'banners',
     'sister_concerns',
+    'search',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
