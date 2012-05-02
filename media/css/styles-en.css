@@ -102,7 +102,9 @@ height:22px;
 .clslogotext
 {
     float: left;
-    font: bold 25px Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
     color: #10a16e;
     margin: 15px 0px 15px 20px;
 }
@@ -1199,3 +1201,27 @@ ul.latest-news li, ul.featured-items li {
 ul.latest-news li.last, ul.featured-items li.last {
     border-bottom: none;
 }
+
+h3.branch-group {
+    margin: 15px 0;
+    color: #F0A247;
+    font-size: 18px;
+}
+table.branches {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 100%; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+table.branches td, table.branches th {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table.branches th {
+    background-color: #7AC9AC;
+    color: #fff;
+}
+

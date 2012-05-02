@@ -1,0 +1,5 @@
+{{ object.name }}
+{{ object.description }}
+{{ object.tag_line }}
+{{ object.designation }}
+{{ object.email }}
