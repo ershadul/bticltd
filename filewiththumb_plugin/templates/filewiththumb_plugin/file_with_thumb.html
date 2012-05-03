@@ -1,0 +1,9 @@
+{% if object.file.url %}
+<a class="file-with-thumb" href="{{ object.file.url }}">
+    {% if object.image %}
+    <img src="{{ object.image.url }}" title="{{ object.title }}" />
+    {% else %}
+{% if object.title %}{{ object.title }}{% else %}{{ object.get_file_name }}{% endif %} {% if object.file_exists %}<span class="filesize">({{ object.file.size|filesizeformat }})</span>{% else %}(file missing!){% endif %}
+    {% endif %}
+</a>
+{% endif %}

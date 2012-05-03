@@ -132,6 +132,8 @@ INSTALLED_APPS = (
     'banners',
     'sister_concerns',
     'search',
+    
+    'filewiththumb_plugin',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
