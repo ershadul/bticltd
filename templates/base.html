@@ -15,12 +15,13 @@
     {% endblock %}
 
     {% block css %}
+        <link rel="stylesheet" type="text/css" href="/media/fonts/fonts.css" />
         <link rel="stylesheet" type="text/css" href="/media/css/jquery.lightbox-0.5.css" />
         <link rel="stylesheet" type="text/css" href="/media/lof-slider/css/lof-slider.css" />
         {% ifequal current_language "en" %}
             <link rel="stylesheet" type="text/css" href="/media/css/styles-en.css" />
         {% else %}
-            <link rel="stylesheet" type="text/css" href="/media/css/styles-en.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/styles-bn.css" />
         {% endifequal %}
     {% endblock %}
     {% block head_extra %}{% endblock %}
