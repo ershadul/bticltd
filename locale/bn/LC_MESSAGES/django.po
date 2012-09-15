@@ -8,10 +8,9 @@ msgstr ""
 "Project-Id-Version: btic ltd\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-12 00:15+0600\n"
-"PO-Revision-Date: 2012-04-14 10:14+0600\n"
+"PO-Revision-Date: 2012-09-15 16:50+0600\n"
 "Last-Translator: Md Ershadul Hoque Sarker <ershadulhoque@gmail.com>\n"
 "Language-Team: djangoguys <ershadulhoque@gmail.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,43 +63,29 @@ msgstr ""
 msgid "Office Incharge"
 msgstr ""
 
-#: about_us/models.py:20
-#: branches/models.py:12
-#: branches/models.py:36
-#: md_messages/models.py:12
-#: news/models.py:13
+#: about_us/models.py:20 branches/models.py:12 branches/models.py:36
+#: md_messages/models.py:12 news/models.py:13
 msgid "Created At"
 msgstr ""
 
-#: about_us/models.py:21
-#: branches/models.py:13
-#: branches/models.py:37
-#: md_messages/models.py:13
-#: news/models.py:14
+#: about_us/models.py:21 branches/models.py:13 branches/models.py:37
+#: md_messages/models.py:13 news/models.py:14
 msgid "Updated At"
 msgstr ""
 
-#: about_us/models.py:22
-#: banners/models.py:12
-#: filebrowser/settings.py:120
+#: about_us/models.py:22 banners/models.py:12 filebrowser/settings.py:120
 #: news/models.py:109
 msgid "Image"
 msgstr ""
 
-#: about_us/models.py:28
-#: branches/models.py:18
-#: branches/models.py:42
-#: filebrowser/forms.py:26
-#: filebrowser/templates/filebrowser/versions.html:63
-#: sister_concerns/models.py:19
-#: sister_concerns/models.py:56
-#: sister_concerns/models.py:94
-#: templates/contacts/contact.html:29
+#: about_us/models.py:28 branches/models.py:18 branches/models.py:42
+#: filebrowser/forms.py:26 filebrowser/templates/filebrowser/versions.html:63
+#: sister_concerns/models.py:19 sister_concerns/models.py:56
+#: sister_concerns/models.py:94 templates/contacts/contact.html:29
 msgid "Name"
 msgstr ""
 
-#: about_us/models.py:29
-#: about_us/models.py:31
+#: about_us/models.py:29 about_us/models.py:31
 msgid "Tag Line"
 msgstr ""
 
@@ -112,14 +97,9 @@ msgstr ""
 msgid "Designation"
 msgstr ""
 
-#: about_us/models.py:33
-#: branches/models.py:43
-#: md_messages/models.py:24
-#: news/models.py:25
-#: sister_concerns/models.py:22
-#: sister_concerns/models.py:58
-#: sister_concerns/models.py:96
-#: templates/branches/index.html:13
+#: about_us/models.py:33 branches/models.py:43 md_messages/models.py:24
+#: news/models.py:25 sister_concerns/models.py:22 sister_concerns/models.py:58
+#: sister_concerns/models.py:96 templates/branches/index.html:13
 msgid "Description"
 msgstr ""
 
@@ -143,11 +123,8 @@ msgstr ""
 msgid "Date updated"
 msgstr ""
 
-#: banners/models.py:18
-#: md_messages/models.py:23
-#: news/models.py:24
-#: news/models.py:87
-#: news/models.py:124
+#: banners/models.py:18 md_messages/models.py:23 news/models.py:24
+#: news/models.py:87 news/models.py:124
 msgid "Title"
 msgstr ""
 
@@ -175,19 +152,16 @@ msgstr ""
 msgid "Locations"
 msgstr ""
 
-#: branches/models.py:44
-#: templates/branches/index.html:11
+#: branches/models.py:44 templates/branches/index.html:11
 msgid "Address"
 msgstr ""
 
-#: branches/models.py:45
-#: templates/branches/index.html:12
+#: branches/models.py:45 templates/branches/index.html:12
 #: templates/contacts/contact.html:54
 msgid "Contact"
 msgstr ""
 
-#: branches/models.py:56
-#: templates/branches/index.html:10
+#: branches/models.py:56 templates/branches/index.html:10
 msgid "Branch"
 msgstr ""
 
@@ -212,15 +186,12 @@ msgstr ""
 msgid "Extension %(ext)s is not allowed. Only %(allowed)s is allowed."
 msgstr ""
 
-#: filebrowser/forms.py:26
-#: filebrowser/forms.py:32
-#: filebrowser/forms.py:49
+#: filebrowser/forms.py:26 filebrowser/forms.py:32 filebrowser/forms.py:49
 #: filebrowser/forms.py:55
 msgid "Only letters, numbers, underscores, spaces and hyphens are allowed."
 msgstr ""
 
-#: filebrowser/forms.py:35
-#: filebrowser/forms.py:58
+#: filebrowser/forms.py:35 filebrowser/forms.py:58
 msgid "The Folder already exists."
 msgstr ""
 
@@ -236,8 +207,7 @@ msgstr ""
 msgid "Folder"
 msgstr ""
 
-#: filebrowser/settings.py:121
-#: news/models.py:128
+#: filebrowser/settings.py:121 news/models.py:128
 msgid "Video"
 msgstr ""
 
@@ -253,12 +223,8 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
-#: filebrowser/views.py:56
-#: filebrowser/views.py:166
-#: filebrowser/views.py:221
-#: filebrowser/views.py:319
-#: filebrowser/views.py:401
-#: filebrowser/views.py:462
+#: filebrowser/views.py:56 filebrowser/views.py:166 filebrowser/views.py:221
+#: filebrowser/views.py:319 filebrowser/views.py:401 filebrowser/views.py:462
 msgid "The requested Folder does not exist."
 msgstr ""
 
@@ -266,8 +232,7 @@ msgstr ""
 msgid "Error finding Upload-Folder. Maybe it does not exist?"
 msgstr ""
 
-#: filebrowser/views.py:143
-#: filebrowser/templates/filebrowser/append.html:5
+#: filebrowser/views.py:143 filebrowser/templates/filebrowser/append.html:5
 #: filebrowser/templates/filebrowser/append.html:7
 #: filebrowser/templates/filebrowser/include/breadcrumbs.html:8
 #: filebrowser/templates/filebrowser/include/breadcrumbs.html:10
@@ -287,8 +252,7 @@ msgstr ""
 msgid "Error creating folder."
 msgstr ""
 
-#: filebrowser/views.py:202
-#: filebrowser/views.py:205
+#: filebrowser/views.py:202 filebrowser/views.py:205
 #: filebrowser/templates/filebrowser/index.html:48
 msgid "New Folder"
 msgstr ""
@@ -297,15 +261,12 @@ msgstr ""
 msgid "Select files to upload"
 msgstr ""
 
-#: filebrowser/views.py:237
-#: filebrowser/templates/filebrowser/index.html:49
+#: filebrowser/views.py:237 filebrowser/templates/filebrowser/index.html:49
 #: filebrowser/templates/filebrowser/upload.html:111
 msgid "Upload"
 msgstr ""
 
-#: filebrowser/views.py:321
-#: filebrowser/views.py:403
-#: filebrowser/views.py:464
+#: filebrowser/views.py:321 filebrowser/views.py:403 filebrowser/views.py:464
 msgid "The requested File does not exist."
 msgstr ""
 
@@ -337,8 +298,7 @@ msgstr ""
 msgid "Rename"
 msgstr ""
 
-#: filebrowser/views.py:472
-#: filebrowser/views.py:475
+#: filebrowser/views.py:472 filebrowser/views.py:475
 #, python-format
 msgid "Versions for \"%s\""
 msgstr ""
@@ -350,7 +310,9 @@ msgstr ""
 
 #: filebrowser/templates/filebrowser/makedir.html:33
 #: filebrowser/templates/filebrowser/upload.html:101
-msgid "The Name will be converted to lowercase. Spaces will be replaced with underscores."
+msgid ""
+"The Name will be converted to lowercase. Spaces will be replaced with "
+"underscores."
 msgstr ""
 
 #: filebrowser/templates/filebrowser/makedir.html:39
@@ -427,8 +389,7 @@ msgstr ""
 #: templates/admin/base.html:55
 #: templates/admin/cms/page/plugin_change_form.html:68
 #: templates/admin/multilingual/change_form.html:64
-#: templates/contacts/contact.html:8
-#: templates/md_messages/show_message.html:7
+#: templates/contacts/contact.html:8 templates/md_messages/show_message.html:7
 #: templates/menu/menu_1.html:11
 msgid "Home"
 msgstr ""
@@ -588,33 +549,24 @@ msgstr[1] ""
 msgid "MD Messages"
 msgstr "এমডি-এর বার্তা"
 
-#: md_messages/models.py:14
-#: news/models.py:15
-#: news/models.py:83
+#: md_messages/models.py:14 news/models.py:15 news/models.py:83
 #: news/models.py:118
 msgid "Image File"
 msgstr ""
 
-#: md_messages/models.py:15
-#: news/models.py:16
-#: news/models.py:119
+#: md_messages/models.py:15 news/models.py:16 news/models.py:119
 msgid "Image URL"
 msgstr ""
 
-#: md_messages/models.py:16
-#: news/models.py:17
-#: news/models.py:120
+#: md_messages/models.py:16 news/models.py:17 news/models.py:120
 msgid "Video File"
 msgstr ""
 
-#: md_messages/models.py:17
-#: news/models.py:18
-#: news/models.py:121
+#: md_messages/models.py:17 news/models.py:18 news/models.py:121
 msgid "Video URL"
 msgstr ""
 
-#: md_messages/models.py:19
-#: news/models.py:20
+#: md_messages/models.py:19 news/models.py:20
 msgid "Is Published"
 msgstr ""
 
@@ -626,31 +578,23 @@ msgstr "এমডি-এর বার্তা"
 msgid "Managing Director's Messages "
 msgstr "এমডি-এর বার্তাসমূহ"
 
-#: news/cms_app.py:6
-#: news/models.py:76
-#: news/models.py:77
+#: news/cms_app.py:6 news/models.py:76 news/models.py:77
 msgid "News"
 msgstr ""
 
-#: news/cms_app.py:12
-#: news/models.py:110
+#: news/cms_app.py:12 news/models.py:110
 msgid "Image Gallery"
 msgstr ""
 
-#: news/cms_app.py:18
-#: news/models.py:129
+#: news/cms_app.py:18 news/models.py:129
 msgid "Video Gallery"
 msgstr ""
 
-#: news/models.py:81
-#: news/models.py:115
-#: sister_concerns/models.py:13
+#: news/models.py:81 news/models.py:115 sister_concerns/models.py:13
 msgid "Creation date"
 msgstr ""
 
-#: news/models.py:82
-#: news/models.py:116
-#: sister_concerns/models.py:14
+#: news/models.py:82 news/models.py:116 sister_concerns/models.py:14
 msgid "Update date"
 msgstr ""
 
@@ -658,21 +602,17 @@ msgstr ""
 msgid "Sister Concerns App"
 msgstr ""
 
-#: sister_concerns/models.py:15
-#: sister_concerns/models.py:51
+#: sister_concerns/models.py:15 sister_concerns/models.py:51
 #: sister_concerns/models.py:89
 msgid "Sort order"
 msgstr ""
 
-#: sister_concerns/models.py:16
-#: sister_concerns/models.py:53
-#: sister_concerns/models.py:91
-#: templates/sister_concerns/products.html:11
+#: sister_concerns/models.py:16 sister_concerns/models.py:53
+#: sister_concerns/models.py:91 templates/sister_concerns/products.html:11
 #: templates/sister_concerns/products.html:12
 #: templates/sister_concerns/projects.html:11
 #: templates/sister_concerns/projects.html:12
-#: templates/sister_concerns/sc.html:11
-#: templates/sister_concerns/sc.html:12
+#: templates/sister_concerns/sc.html:11 templates/sister_concerns/sc.html:12
 #: templates/sister_concerns/show_product.html:11
 #: templates/sister_concerns/show_product.html:12
 #: templates/sister_concerns/show_project.html:11
@@ -680,8 +620,7 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: sister_concerns/models.py:20
-#: sister_concerns/models.py:57
+#: sister_concerns/models.py:20 sister_concerns/models.py:57
 #: sister_concerns/models.py:95
 msgid "Slogan"
 msgstr ""
@@ -694,13 +633,11 @@ msgstr ""
 msgid "Sister Concerns"
 msgstr ""
 
-#: sister_concerns/models.py:48
-#: sister_concerns/models.py:86
+#: sister_concerns/models.py:48 sister_concerns/models.py:86
 msgid "Created at"
 msgstr ""
 
-#: sister_concerns/models.py:49
-#: sister_concerns/models.py:87
+#: sister_concerns/models.py:49 sister_concerns/models.py:87
 msgid "Updated at"
 msgstr ""
 
@@ -708,8 +645,7 @@ msgstr ""
 msgid "Project"
 msgstr ""
 
-#: sister_concerns/models.py:78
-#: templates/sister_concerns/projects.html:22
+#: sister_concerns/models.py:78 templates/sister_concerns/projects.html:22
 #: templates/sister_concerns/sc.html:26
 #: templates/sister_concerns/sister_concerns_menu.html:11
 #: templates/sister_concerns/sister_concerns_sidebar_menu.html:25
@@ -720,8 +656,7 @@ msgstr " প্রকল্পসমূহ"
 msgid "Product"
 msgstr ""
 
-#: sister_concerns/models.py:116
-#: templates/sister_concerns/products.html:22
+#: sister_concerns/models.py:116 templates/sister_concerns/products.html:22
 #: templates/sister_concerns/sc.html:29
 #: templates/sister_concerns/sister_concerns_menu.html:13
 #: templates/sister_concerns/sister_concerns_sidebar_menu.html:27
@@ -750,7 +685,7 @@ msgstr "বুশরা টে্রড ইন্টারন্যাশনা�
 
 #: templates/base.html:38
 msgid "A multinetwork Joint Business Company"
-msgstr "একটি মাল্টিনেটওয়ার্ক এবং যৌথ ব্যবসায়িক প্রতিষ্ঠান"
+msgstr "শেয়ার ভিত্তিক পরিচালিত একটি বহুমূখী যৌথ ব্যবসায়ী প্রতিষ্ঠান"
 
 #: templates/index.html:11
 msgid "Welcome to BTIC"
@@ -852,8 +787,7 @@ msgstr "প্রতিষ্ঠান"
 msgid "Message"
 msgstr "মন্তব্য"
 
-#: templates/search/search.html:6
-#: templates/search/search.html.py:12
+#: templates/search/search.html:6 templates/search/search.html.py:12
 #: templates/search/search.html:16
 msgid "Search Results"
 msgstr "সার্চের ফলাফল"
@@ -865,4 +799,3 @@ msgstr "আরও পড়ুন"
 #: templates/search/search.html:29
 msgid "No result found."
 msgstr "কোন তথ‍্য পাওয়া যাই নাই।"
-
