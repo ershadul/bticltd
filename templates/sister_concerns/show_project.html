@@ -19,7 +19,11 @@
         </div>
         <div class="clear"></div>
         <div class="dottedline"></div>
-        <div class="sc-description">{{ project.description|safe }}</div>
+        <div class="sc-description">
+            {% if project.description %}
+                {{ project.description|safe }}
+            {% endif %}
+        </div>
         <div class="clear"></div>
     </div>
 {% endblock %}

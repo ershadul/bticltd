@@ -19,7 +19,11 @@
         </div>
         <div class="clear"></div>
         <div class="dottedline"></div>
-        <div class="sc-description">{{ sister_concern.description|safe }}</div>
+        <div class="sc-description">
+            {% if sister_concern.description %}
+                {{ sister_concern.description|safe }}
+            {% endif %}
+        </div>
         <div class="clear"></div>
         <div class="padding" id="sister-concern-links">
             {% if sister_concern.project_set.count > 0 %}
