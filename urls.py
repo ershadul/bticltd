@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     (r'^admin/cms/page/\s*themes/(?P<path>.*)', \
         'django.views.static.serve', { 'document_root' : settings.MEDIA_ROOT + '/cms/jstree/themes'}),
     (r'^admin/', include(admin.site.urls)),
+    (r'^robots\.txt', 'views.robots'),
     (r'^search/', include('haystack.urls')),
     (r'^', include('cms.urls')),
 )
