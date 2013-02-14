@@ -3,7 +3,7 @@ import subprocess
 import time
 
 # django imports
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.shortcuts import render_to_response
 from django.conf import settings
 
@@ -47,3 +47,22 @@ class DefaultLanguageMiddleware(object):
         if lang_path == '' or lang_path not in ['en', 'ar']:
             language = request.COOKIES.get('django_language', 'ar')
             return HttpResponseRedirect('/%s%s' % (language, request.path))
+
+
+class BotDetectorMiddleware(object):
+    def process_request(self, request):
+        forbidden_bots = [
+            'YandexBot',
+            'Exabot',
+            'bingbot',
+            'DBLBot',
+            'DotBot',
+            'msnbot',
+            'CCBot',
+            'TwengaBot-Discover',
+            'Cityreview Robot',
+            'yacybot'
+        ]
+        for bot in forbidden_bots:
+            if request.META['HTTP_USER_AGENT'].find(bot) > -1:
+                raise Http404

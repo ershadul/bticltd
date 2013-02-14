@@ -20,4 +20,3 @@ urlpatterns = patterns('',
     (r'^search/', include('haystack.urls')),
     (r'^', include('cms.urls')),
 )
-

@@ -73,12 +73,12 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'middleware.BotDetectorMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    
     #'middleware.DefaultLanguageMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
@@ -123,7 +123,6 @@ INSTALLED_APPS = (
     'cms.plugins.video',
     'haystack',
     'cms_search',
-
     'news',
     'md_messages',
     'contacts',
@@ -132,7 +131,6 @@ INSTALLED_APPS = (
     'banners',
     'sister_concerns',
     'search',
-    
     'filewiththumb_plugin',
 )
 
@@ -168,10 +166,10 @@ TINYMCE_JS_URL = '/media/js/tiny_mce/tiny_mce.js'
 
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': "table,paste,searchreplace,advimage,advlink,fullscreen,visualchars,preview,media,directionality,contextmenu,directionality",
-    'theme_advanced_path_location' : "bottom",
-    'theme_advanced_buttons1' : "fullscreen,separator,preview,separator,media,cut,copy,paste,separator,undo,redo,separator,search,separator,ltr,rtl,separator,replace,separator,code,separator,cleanup,separator,bold,italic,underline,strikethrough,separator,forecolor,backcolor,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,help",
-    'theme_advanced_buttons2' : "removeformat,styleselect,formatselect,fontselect,fontsizeselect,separator,bullist,numlist,outdent,indent,separator,link,unlink,anchor",
-    'theme_advanced_buttons3' : "sub,sup,separator,image,insertdate,inserttime,separator,tablecontrols,separator,hr,advhr,visualaid,separator,charmap,emotions,iespell,flash,separator,print",
+    'theme_advanced_path_location': "bottom",
+    'theme_advanced_buttons1': "fullscreen,separator,preview,separator,media,cut,copy,paste,separator,undo,redo,separator,search,separator,ltr,rtl,separator,replace,separator,code,separator,cleanup,separator,bold,italic,underline,strikethrough,separator,forecolor,backcolor,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,help",
+    'theme_advanced_buttons2': "removeformat,styleselect,formatselect,fontselect,fontsizeselect,separator,bullist,numlist,outdent,indent,separator,link,unlink,anchor",
+    'theme_advanced_buttons3': "sub,sup,separator,image,insertdate,inserttime,separator,tablecontrols,separator,hr,advhr,visualaid,separator,charmap,emotions,iespell,flash,separator,print",
     'mode': 'textareas',
     'theme': 'advanced',
     'theme_advanced_toolbar_location': 'top',
